@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const controller = require('../app/controllers/example-controller');
-const policy = require('../app/policies/example-policy');
+const controller = require('../controllers/example-controller');
+const policy = require('../middlewares/policies/example-policy');
 
 router.post('/save', policy.save, controller.saveExample);
 router.get('/get', controller.getExample);
